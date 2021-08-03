@@ -90,7 +90,7 @@
 
 1. #### Horizontal whitespace **[⬆](#table-of-content)**
    
-   Use of horizontal whitespace depends on location, and falls into three broad categories: leading (at the start of a line), trailing (at the end of a line), and internal. Leading whitespace (i.e., indentation) is addressed [here](#indentation). Trailing whitespace is forbidden.
+   Use of horizontal whitespace depends on location, and falls into three broad categories: leading (at the start of a line), trailing (at the end of a line), and internal. Leading whitespace (i.e., indentation) is addressed [here](#indentation-2-). Trailing whitespace is forbidden.
    
    A single internal space appears on the following places:
    * Separating any reserved word (such as `if`, `for`, or `catch`) except for `function` and `super`, from an open parenthesis (`(`) that follows it on that line.
