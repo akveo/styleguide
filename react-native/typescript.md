@@ -28,14 +28,14 @@
 | global constant values  | CONSTANT_CASE |
 | static readonly values  | CONSTANT_CASE |
 
-* Do not use `_` or other prefix unless it's `I` for interfaces.
-* Generics parameters like `Array<T>` should use single uppercase character.
+* Do not use `_` or other prefixes unless it's `I` for interfaces.
+* Generics parameters like `Array<T>` should use a single uppercase character.
 
 ## Formatting
 
 1. #### Braces **[⬆](#table-of-content)**
 
-   * Braces are required for all control structures (i.e. if, else, for, do, while, as well as any others), even if the body contains only a single statement. The only excepti
+   * Braces are required for all control structures (i.e. if, else, for, do, while, as well as any others), even if the body contains only a single statement.
    * For nonempty code blocks use "Egyptian brackets"
      * No line break before the opening brace.
      * Line break after the opening brace.
@@ -68,13 +68,13 @@
 
 1. #### Statements **[⬆](#table-of-content)**
 
-   * Each statement is followed by a line-break.
+   * Each statement is followed by a line break.
    * Every statement must be terminated with a semicolon. Relying on automatic semicolon insertion is forbidden.
 
 1. #### Column limit: 80 **[⬆](#table-of-content)**
 
    * If a line is longer than 80 symbols it should be wrapped.
-   * Line break should be placed after operator. This is not applies to the 'dot' (which is not an operator).
+   * Line break should be placed after the operator. This does not apply to the 'dot' (which is not an operator).
    * Break lines at a **higher syntactic level**.
      * The syntactic levels from highest to lowest are as follows: assignment, division, function call, parameters, number constant.
    * Indent continuation lines at least +4 spaces from the original line.
@@ -90,9 +90,9 @@
 
 1. #### Horizontal whitespace **[⬆](#table-of-content)**
    
-   Use of horizontal whitespace depends on location, and falls into three broad categories: leading (at the start of a line), trailing (at the end of a line), and internal. Leading whitespace (i.e., indentation) is addressed [here](#indentation-2-). Trailing whitespace is forbidden.
+   The use of horizontal whitespace depends on location and falls into three broad categories: leading (at the start of a line), trailing (at the end of a line), and internal. Leading whitespace (i.e., indentation) is addressed [here](#indentation-2-). Trailing whitespace is forbidden.
    
-   A single internal space appears on the following places:
+   A single internal space appears in the following places:
    * Separating any reserved word (such as `if`, `for`, or `catch`) except for `function` and `super`, from an open parenthesis (`(`) that follows it on that line.
    * Separating any reserved word (such as `else` or `catch`) from a closing curly brace (`}`) that precedes it on that line.
    * After opening curly brace `{` and before closing `}` curly brace when it's a single property object literal: `{ name: 'John' }`, `{ lastname }`, `{ ...data }`.
@@ -194,8 +194,20 @@
    
 1. #### @ts-ignore **[⬆](#table-of-content)**
    
-   * Do not use `@ts-ignore`.
+   * Try not to use `@ts-ignore`. Try to avoid `@ts-ignore` when dealing with type error. Advices from [Type any](#type-any-table-of-content) could help.
+   
+1. #### Decorators **[⬆](#table-of-content)**
 
+   * When using decorators, the decorator must immediately precede the symbol it decorates, with no empty lines between.
+   * Decorators should be on the line above the decorated class, property or method:
+   ```typescript
+   @injectable()
+   class UserService {
+   
+     @observable
+     private username = '';
+   }
+   ```
 1. #### Non-nullability Assertions **[⬆](#table-of-content)**
    
    * You should not use type and non-nullability assertions without an obvious or explicit reason for doing so.
@@ -216,17 +228,28 @@
      y.bar();
    }
    ```
+   * Use optional chaining `?.` operator for "presence" (if value is not `null` or `undefined`) check.
+   ```typescript
+   // bad
+   if(user && user.address && user.address.street)
+   
+   //good
+   if(user?.address?.street)
+   ```
+   * Use nullish coalescing `??` operator as "fall back" to a default value when dealing with `null` or `undefined`.
+
+
 
 ## Source code organization
 
 1. #### File Names **[⬆](#table-of-content)**
    
-   * File name should be in `lowerCamelCase` format. File name may have separator `.` and details of file type: `login.container.tsx`
+   * File name should be in `lowerCamelCase` format. File name may have dot separator (`.`) and details of file type: `users.api.tsx`
    
 1. #### Modules **[⬆](#table-of-content)**
    
    * Use named exports. Do not use default exports.
-   * Use destructing imports be default. You may use also use renaming imports if necessary.
+   * Use destructing imports by default. You may use also use renaming imports if necessary.
    
 ## Types
 
@@ -274,6 +297,7 @@
      * Provide a more specific type. Use interface, an inline object type, or a type alias
      * Use `unknown` 
      * Suppress the lint warning and document why it is legitimate
+   * Take a look at the recommendation [here](https://thoughtbot.com/blog/typescript-stop-using-any-there-s-a-type-for-that).
 
 ## Other
 
