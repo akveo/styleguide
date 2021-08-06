@@ -1,4 +1,4 @@
-# Akveo Typescript styleguide
+# Akveo React styleguide
 
 ## Table of content
 
