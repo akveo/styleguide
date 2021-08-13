@@ -16,7 +16,7 @@
 | Category         | Style           |
 | ------------- |:-------------:|
 | class     | UpperCamelCase |
-| interface | **I**UpperCamelCase |
+| interface | UpperCamelCase |
 | type      | UpperCamelCase |
 | enum      | UpperCamelCase |
 | variable  | lowerCamelCase |
@@ -28,7 +28,7 @@
 | global constant values  | CONSTANT_CASE |
 | static readonly values  | CONSTANT_CASE |
 
-* Do not use `_` or other prefixes unless it's `I` for interfaces.
+* Do not use `_` or other prefixes.
 * Generics parameters like `Array<T>` should use a single uppercase character.
 
 ## Formatting
