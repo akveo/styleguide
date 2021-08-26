@@ -1,54 +1,46 @@
 # Akveo RxJs styleguide
 
-Наши правила будут основаны на правилах линтера для rxjs https://github.com/cartant/eslint-plugin-rxjs.
+Our rules will be based on the linter rules for RxJs https://github.com/cartant/eslint-plugin-rxjs.
 
 ## `akveo/rxjs:recommended`
 
-Этот конфиг будет расширять набор правил `plugin:rxjs/recommended`, который приходит из модуля.
+This config will extend the `plugin:rxjs/recommended` rule set.
 
-Правила, которые будут включены наследованием конфига:
-- `no-async-subscribe`. Асинхронная логика внутри `subscribe` может приводить к утчекам памяти и race condition, поэтому ее надо выносить в `switchMap`/`mergeMap`/и т.д.
-- `no-create`. `Observable.create` - помечен устаревшим.
-- `no-ignored-notifier`. В операторах `repeatWhen` or `retryWhen` лучше использовать переданные notifier стримы, как точку старта.
-- `no-ignored-replay-buffer`. При использовании операторов `publishReplay`, `shareReplay` и `ReplaySubject` надо указывать размер буфера, потому что по умолчанию его размер - `Number.POSITIVE_INFINITY`, что редко необходимо и часто приводит к неожиданному поведению.
-- `no-ignored-takewhile-value`. Если значение, переданное в колбек `takeWhile`, не используется, то функция использует внешние факторы, и для избежания утечек памяти лучше использовать `takeUntil`.
-- `no-implicit-any-catch`. Лучше типизация ошибок.
-- `no-index`. Может приводить к неожиданным багам и утечкам памяти. Больше деталей тут https://github.com/ReactiveX/rxjs/issues/4230
-- `no-internal`. Может приводить к неожиданным багам и утечкам памяти. Больше деталей тут https://github.com/ReactiveX/rxjs/issues/4230
-- `no-nested-subscribe`. Вложенные подписки? Стоит отрефакторить, иначе это легкий путь к утечкам памяти.
-- `no-redundant-notify`. Помогает избегать ненужных notify-событий. Например, если сделать `subject.error();`, то после него `subject.complete();` уже не нужен.
-- `no-sharereplay`. `shareReplay` без конфига приводит к утечкам памяти, https://github.com/ReactiveX/rxjs/pull/4059. По умолчанию запрещает использование `shareReplay` без конфига.
-- `no-subject-unsubscribe`. `unsubsribe` у subject'ов работает по другому и чаще всего его использование - ошибка.
-- `no-unbound-methods`. Передавать функции класса как колбеки – не очень хорошо. https://ncjamieson.com/avoiding-unbound-methods/
-- `no-unsafe-subject-next`. Если у `subject` не указан тип `void`, то в `.next()` не стоит вызывать без аргументов.
-- `no-unsafe-takeuntil`. Не правильно расположенный `takeUntil` может привести к утчекам памяти. https://ncjamieson.com/avoiding-takeuntil-leaks/
+Rules to be enabled by config inheritance:
+- `no-async-subscribe`. Asynchronous logic inside `subscribe` can lead to memory leaks and race conditions, so it should be moved to `switchMap`/`mergeMap`/etc.
+- `no-create`. `Observable.create` - marked deprecated.
+- `no-ignored-notifier`. In the `repeatWhen` and `retryWhen` operators, it is better to start the logic with the passed `notifier`.
+- `no-ignored-replay-buffer`. When using the `publishReplay`, `shareReplay` and `ReplaySubject` operators, it is necessary to specify the buffer size because its default size is `Number.POSITIVE_INFINITY`, which is rarely necessary and often leads to unexpected behavior.
+- `no-ignored-takewhile-value`. Not using passed value to the callback of `takeWhile`, means the function uses external factors. In that case, it is better to use `takeUntil` to avoid memory leaks.
+- `no-implicit-any-catch`. Better error typing.
+- `no-index`. Can cause unexpected bugs and memory leaks. More details here https://github.com/ReactiveX/rxjs/issues/4230
+- `no-internal`. Can cause unexpected bugs and memory leaks. More details here. https://github.com/ReactiveX/rxjs/issues/4230
+- `no-nested-subscribe`. Nested subscriptions? Worth refactoring, otherwise it's an easy path to memory leaks.
+- `no-redundant-notify`. It helps to avoid unnecessary notify events. For example, if you make `subject.error();`, then after it `subject.complete();` is no longer needed.
+- `no-sharereplay`. `shareReplay` without config leads to memory leaks, https://github.com/ReactiveX/rxjs/pull/4059. By default, disallow using `shareReplay` without config.
+- `no-subject-unsubscribe`. `unsubsribe` of the subjects works differently, and its use is most often a mistake.
+- `no-unbound-methods`. The passing class functions as the callback is not good. https://ncjamieson.com/avoiding-unbound-methods/
+- `no-unsafe-subject-next`. If `subject` has no `void` type, `.next()` should be called **with** arguments.
+- `no-unsafe-takeuntil`. Incorrectly placed `takeUntil` can lead to memory leaks. https://ncjamieson.com/avoiding-takeuntil-leaks/
 
-Так же нужны будут следующие изменения:
+Extra turned on rules:
 
-- Включаем `no-compat`. Кому вообще нужен компат в приложении? Иметь его в зависимости для поддержки старых библиотек еще норм, а вот зачем в приложении его использовать напрямую? Скорее всего это неправильное использование.
-- Включаем `no-ignored-observable`. Любой observable должен быть использован, а не просто лежать посреди кода.
-
-## akveo/rxjs:strict
-
-Конфиг будет расширять наш recommended конфиг и делать его строже.
-
-- Включаем `no-exposed-subjects`. Зачастую subject'ы используются как какое-то хранилище данных, а класс который использует subject дает АПИ для получения информации из subject и для его модификации, поэтому выдавать subject наружу – не ок.
-- Включаем `no-ignored-error`. Отлавливаем **все** ошибки.
-- Включаем `no-topromise`. Если мы начинаем работать со стримами, то удобнее все оставлять в стримах и лучше тогда promise'ы приводить к потокам, а не наоборот.
-
-Возможно правила `no-exposed-subjects` и `no-ignored-error` не имеют большого профита. Тогда `no-topromise` я бы перенес в recommended и убрал бы strict правила, как отдельную настройку.
+- Turn on `no-compat`. Who needs `compat` in an application anyway? Having it in a dependency to support old libraries is fine, but why use it directly in an application? This is most likely a misuse.
+- Enable `no-ignored-observable`. Any observable should be used, not just lying in the middle of code.
+- Enable `no-exposed-subjects`. Often subjects are used as data storage, and the class that uses the subject gives the API to get information from the subject and modify it, so giving the subject out is not good.
+- Enable `no-topromise`. If we start working with observables, it's more convenient to leave everything in observables and it's better to bring promises to observables, not vice versa.
 
 ## akveo/rxjs:with_store
 
-Есть часть правил, которые не включены в `plugin:rxjs/recommended` и в наш recommended, потому что у они узкоспециализированы в работе со стором типа ngrx. Потенциально мы их можем включить в дополнительный набор правил для стора.
+There are some rules which are not included in `plugin:rxjs/recommended` and in our `recommended`, because they are highly specialized in dealing with a store like `ngrx`. We could potentially include them in an additional set of store rules.
 
-- Включаем `no-cyclic-action`. Защищаемся от простых циклических экшенов в эффектах.
-- Включаем `no-unsafe-catch`. `catchError` в неправильном месте завершает весь поток, и часто это не желаемое поведение.
-- Включаем `no-unsafe-first`. `first` в неправильном месте завершает весь поток, и часто это не желаемое поведение.
-- Включаем `no-unsafe-switchmap`. `switchMap` в определенных типах экшенов может приводить к потере данных.
+- Enable `no-cyclic-action'. Protect against simple cyclic actions in effects.
+- Enable `no-unsafe-catch`. `catchError` in the wrong place terminates the whole observable, and this is often not the desired behavior.
+- Enable "no-unsafe-first". "first" in the wrong place terminates the whole observable, and this is often not the desired behavior.
+- Enable `no-unsafe-switchmap`. `switchMap` in certain types of actions that may cause loss of data.
 
 ## akveo/rxjs:angular
 
-Правила для ангуляра находятся в другом пакете https://github.com/cartant/eslint-plugin-rxjs-angular.
+The rules for Angular are in another package https://github.com/cartant/eslint-plugin-rxjs-angular.
 
-- Включаем `prefer-takeuntil`. Если сделали подписку, надо отписаться. Надо переопределить настройку `"checkDecorators": ["Component", "Directive", "Pipe", "Service"]`.
+- Enable "prefer-takeuntil". If you have subscribed, you have to unsubscribe. We have to override the setting `"checkDecorators" : ["Component", "Directive", "Pipe", "Service"]`.
