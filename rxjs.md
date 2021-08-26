@@ -34,13 +34,13 @@ Extra turned on rules:
 
 There are some rules which are not included in `plugin:rxjs/recommended` and in our `recommended`, because they are highly specialized in dealing with a store like `ngrx`. We could potentially include them in an additional set of store rules.
 
-- Enable `no-cyclic-action'. Protect against simple cyclic actions in effects.
+- Enable `no-cyclic-action`. Protect against simple cyclic actions in effects.
 - Enable `no-unsafe-catch`. `catchError` in the wrong place terminates the whole observable, and this is often not the desired behavior.
-- Enable "no-unsafe-first". "first" in the wrong place terminates the whole observable, and this is often not the desired behavior.
+- Enable `no-unsafe-first`. `first` in the wrong place terminates the whole observable, and this is often not the desired behavior.
 - Enable `no-unsafe-switchmap`. `switchMap` in certain types of actions that may cause loss of data.
 
 ## akveo/rxjs:angular
 
 The rules for Angular are in another package https://github.com/cartant/eslint-plugin-rxjs-angular.
 
-- Enable "prefer-takeuntil". If you have subscribed, you have to unsubscribe. We have to override the setting `"checkDecorators" : ["Component", "Directive", "Pipe", "Service"]`.
+- Enable `prefer-takeuntil`. If you have subscribed, you have to unsubscribe. We have to override the setting `"checkDecorators" : ["Component", "Directive", "Pipe", "Service"]`.
