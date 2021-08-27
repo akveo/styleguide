@@ -1,13 +1,13 @@
 # Akveo RxJs styleguide
 
-Our rules will be based on the linter rules for RxJs https://github.com/cartant/eslint-plugin-rxjs.
+Our rules are based on the linter rules for RxJs https://github.com/cartant/eslint-plugin-rxjs.
 
 ## `akveo/rxjs:recommended`
 
-This config will extend the `plugin:rxjs/recommended` rule set.
+This config extends the `plugin:rxjs/recommended` rule set.
 
 Rules to be enabled by config inheritance:
-- `no-async-subscribe`. Asynchronous logic inside `subscribe` can lead to memory leaks and race conditions, so it should be moved to `switchMap`/`mergeMap`/etc.
+- `no-async-subscribe`. Asynchronous logic inside `subscribe` can lead to memory leaks and race conditions. It's better to keep asynchronous code in `switchMap`/`mergeMap`/etc.
 - `no-create`. `Observable.create` - marked deprecated.
 - `no-ignored-notifier`. In the `repeatWhen` and `retryWhen` operators, it is better to start the logic with the passed `notifier`.
 - `no-ignored-replay-buffer`. When using the `publishReplay`, `shareReplay` and `ReplaySubject` operators, it is necessary to specify the buffer size because its default size is `Number.POSITIVE_INFINITY`, which is rarely necessary and often leads to unexpected behavior.
