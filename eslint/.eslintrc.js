@@ -111,7 +111,7 @@ module.exports = {
 		},
 		{
 			files: [ '*.jsx', '*.tsx' ],
-			extends: [ './eslint_react_native.js' ], // react config path
+			extends: [ './eslint_react_native.js' ], // react native config path
 		}
 	]
 };
