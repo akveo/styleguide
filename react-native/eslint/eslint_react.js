@@ -1,11 +1,12 @@
 /*
  * USAGE REQUIREMENTS:
- * yarn add -D eslint-plugin-react
+ * yarn add -D eslint-plugin-react eslint-plugin-react-native
  */
 
 /*
  * Additional information:
  * https://github.com/yannickcr/eslint-plugin-react
+ * https://www.npmjs.com/package/eslint-plugin-react-native
  */
 
 const rules = {
@@ -40,7 +41,7 @@ const rules = {
 	'react/jsx-no-constructed-context-values': 'error',
 	'react/jsx-no-duplicate-props': 'error',
 	'react/jsx-no-useless-fragment': 'error',
-	'react/jsx-one-expression-per-line': 'error',
+	'react/jsx-one-expression-per-line': [ 'error', { allow: 'literal' }],
 	'react/jsx-pascal-case': 'error',
 	'react/jsx-props-no-multi-spaces': 'error',
 	'react/jsx-space-before-closing': [ 'error', 'always' ],
@@ -69,10 +70,14 @@ const rules = {
 	'react/prefer-stateless-function': 'error',
 	'react/self-closing-comp': 'error',
 	'react/style-prop-object': 'error',
+	'react-native/no-unused-styles': 2,
+	'react-native/no-inline-styles': 2,
+	'react-native/no-raw-text': 2,
+	'react-native/no-single-element-style-arrays': 2,
 };
 
 module.exports = {
-	plugins: [ 'react' ],
+	plugins: [ 'react', 'react-native' ],
 	extends: [
 		'plugin:react/recommended',
 		'plugin:react/jsx-runtime', // For React 17.0 version and higher
@@ -81,6 +86,9 @@ module.exports = {
 		'ecmaFeatures': {
 			'jsx': true
 		}
+	},
+	settings: {
+		'react-native/style-sheet-object-names': [ 'StyleService' ]
 	},
 	rules,
 };
