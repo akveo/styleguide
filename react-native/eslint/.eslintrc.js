@@ -43,7 +43,7 @@ const rules = {
 	'class-methods-use-this': 'error',
 	'array-callback-return': 'error',
 	'jsx-quotes': [ 'error', 'prefer-single' ],
-	'indent': [ 'error', 'tab' ],
+	'indent': [ 'error', 2 ],
 	'no-unneeded-ternary': 'error',
 	'no-restricted-syntax': [ 'error', {
 		'selector': 'ExportDefaultDeclaration',

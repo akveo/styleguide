@@ -142,7 +142,7 @@ const rules = {
 	'@typescript-eslint/restrict-plus-operands':
     [ 'error', { 'checkCompoundAssignments': true }],
 	'@typescript-eslint/type-annotation-spacing': 'error',
-	'@typescript-eslint/indent': [ 'error', 'tab' ],
+	'@typescript-eslint/indent': [ 'error', 2 ],
 };
 
 module.exports = {

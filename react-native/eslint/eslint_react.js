@@ -33,7 +33,7 @@ const rules = {
 	'react/jsx-curly-newline': 'error',
 	'react/jsx-first-prop-new-line': [ 'error', 'multiline' ],
 	'react/jsx-fragments': [ 'error', 'syntax' ],
-	'react/jsx-indent-props': [ 'error', 'tab' ],
+	'react/jsx-indent-props': [ 'error', 2 ],
 	'react/jsx-key': 'error',
 	'react/jsx-max-props-per-line':
 		[ 'error', { maximum: 3 }],
