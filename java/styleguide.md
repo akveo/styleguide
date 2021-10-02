@@ -1,0 +1,1 @@
+# Akveo Java styleguide
