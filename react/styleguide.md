@@ -172,7 +172,16 @@
        "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
        // fix ‘Enum is already declared in the upper scope' error
        "no-shadow": "off",
-       "@typescript-eslint/no-shadow": ["error"]
+       "@typescript-eslint/no-shadow": ["error"],
+       // fix 'import/extensions' error
+       "import/extensions": [
+         "error",
+         "ignorePackages",
+         {
+           "ts": "never",
+           "tsx": "never"
+         }
+       ],
      }
    }
    ```
