@@ -29,7 +29,7 @@
    * Use lowerCamelCase for prop names.
    * It's recommended to use suffixes `Component` or `Container` for explicit definition of "dumb" and "smart" components: `UserProfileComponent` and `UserProfileContainer`.
    * Component name should be the same as the file name. This means that the use of `index` files is forbidden for components. It's easier to find components by filename rather than by folder name.
-   * Component filenames should be in lowerCamelCase. It's allowed to use dots (`.`) to explicitly mention type of component: `dashboard.component.tsx`, `userProfile.container.tsx`.
+   * Component filenames should be in UpperCamelCase. It's allowed to use dots (`.`) to explicitly mention type of component: `dashboard.component.tsx`, `userProfile.container.tsx`.
    * Props and state interface definitions shouldn't be prefixed with `I`. Use UpperCamelCase instead.
    * Exported props types should have a suffix `Props`: `ProgressBarProps`. Not exported props and state interfaces recommended naming `Props` and `State` respectively.   
 
