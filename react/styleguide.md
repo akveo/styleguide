@@ -64,12 +64,17 @@
        name='Boris'
        lastName='Blade' />
      ```
-   * Multiline JSX is wrapped in parentheses. After opening parenthesis `(` and before closing `)` should be a line break.
+   * Both single line & multiline JSX are wrapped in parentheses. After opening parenthesis `(` and before closing `)` should be a line break.
    ```tsx
    return (
      <CustomComponent 
        prop1={value1}
        prop2={value2} />
+   );
+   ```
+   ```tsx
+   const MyComponent = (props) => (
+     <UserProfile {...props} />
    );
    ```
 
