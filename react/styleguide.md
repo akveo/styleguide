@@ -65,18 +65,18 @@
        lastName='Blade' />
      ```
    * Both single line & multiline JSX are wrapped in parentheses. After opening parenthesis `(` and before closing `)` should be a line break.
-   ```tsx
-   return (
-     <CustomComponent 
-       prop1={value1}
-       prop2={value2} />
-   );
-   ```
-   ```tsx
-   const MyComponent = (props) => (
-     <UserProfile {...props} />
-   );
-   ```
+     ```tsx
+     return (
+       <CustomComponent 
+         prop1={value1}
+         prop2={value2} />
+     );
+     ```
+     ```tsx
+     const MyComponent = (props) => (
+       <UserProfile {...props} />
+     );
+     ```
 
 1. #### Props **[⬆](#table-of-content)**
 
