@@ -85,6 +85,16 @@
    * Destruct props and state before usage.
    
 
+1. #### Ternary operators inside JSX
+   * Do not use ternary operator when one of the return expressions is `null`. Instead, use Short Circuit Evaluation:
+   ```tsx
+   {hasIcon && <Icon />}
+   ```
+   * Do not use ternary operator inside jsx with complex components. Put only render methods or component variables:
+   ```tsx
+   {isAuthenticated ? renderAuthFlow() : signInComponent}
+   ```
+
 ## Component Structure
 
 1. #### Naming of component members **[⬆](#table-of-content)**
