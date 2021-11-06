@@ -29,7 +29,7 @@
    * Use lowerCamelCase for prop names.
    * It's recommended to use suffixes `Component` or `Container` for explicit definition of "dumb" and "smart" components: `UserProfileComponent` and `UserProfileContainer`.
    * Component name should be the same as the file name. This means that the use of `index` files is forbidden for components. It's easier to find components by filename rather than by folder name.
-   * Component filenames should be in UpperCamelCase. It's allowed to use dots (`.`) to explicitly mention type of component: `dashboard.component.tsx`, `userProfile.container.tsx`.
+   * Component filenames should be in UpperCamelCase. It's allowed to use dots (`.`) to explicitly mention type of component: `Dashboard.component.tsx`, `UserProfile.container.tsx`.
    * Props and state interface definitions shouldn't be prefixed with `I`. Use UpperCamelCase instead.
    * Exported props types should have a suffix `Props`: `ProgressBarProps`. Not exported props and state interfaces recommended naming `Props` and `State` respectively.   
 
@@ -137,6 +137,22 @@
     This setup automatically will install the packages mentioned in the **Recommended packages** section.
     However, this setup will still cause error even in the basic create-react-app project. 
     The additional steps to make sure that ESLint is running smoothly with React application are listed below.
+    
+   **Rules for React Hook**
+   * install [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) to enforce hooks rules that were set by React team:
+     ```
+     npm install eslint-plugin-react-hooks --save-dev
+     ```
+   * add newly installed plugin to .eslintrc.json file:
+     ```json
+     {
+       // ...
+       "plugins": [
+       // ...
+         "react-hooks"
+       ],
+     }
+     ```
 
    **Guide for JavaScript project**
    * install [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) package, in order to prevent issues with misspelling of file paths and import names:
