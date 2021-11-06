@@ -52,24 +52,28 @@
    * Component with more than one prop or with children must be multiline
      * Each prop should start from the new line
      * Children should start from the new line
-     * Closing bracket of the opening tag `>` and self-closing `/>` tag should stick to the line with last prop.
-     ```tsx
-     <Button
-       size='small'
-       onPress={onPress}>
-       {buttonText}
-     </Button>
-     
-     <UserProfile
-       name='Boris'
-       lastName='Blade' />
-     ```
+     * Closing bracket of the opening tag `>` should stick to the line with last prop.
+       ```tsx
+       <Button
+         size='small'
+         onPress={onPress}>
+         {buttonText}
+       </Button>
+       ```
+     * Self-closing `/>` tag should be placed on the new line
+       ```tsx
+       <UserProfile
+         name='Boris'
+         lastName='Blade' 
+       />
+       ```
    * Both single line & multiline JSX are wrapped in parentheses. After opening parenthesis `(` and before closing `)` should be a line break.
      ```tsx
      return (
        <CustomComponent 
          prop1={value1}
-         prop2={value2} />
+         prop2={value2}
+       />
      );
      ```
      ```tsx
@@ -83,9 +87,9 @@
    * Use single quotes `'` for jsx attributes.
    * Do not use braces `{}` for string literals unless it's JS expression.
    * Use explicit value for boolean props even if default value is `true`. 
-   ```tsx
-   <Component enabled={true} />
-   ```
+     ```tsx
+     <Component enabled={true} />
+     ```
    * Do not inline object or array creation inside jsx. Prepare the data before `return` statement.
    * Inline styles are forbidden. Use `Stylesheet.create` or its analogue.
    * Destruct props and state before usage.
@@ -101,7 +105,7 @@
 1. #### Component members ordering **[⬆](#table-of-content)**
 
    * Members of class component should be in following order:
-     1. `static`fields and methods
+     1. `static` fields and methods
      1. `constructor`
      1. component lifecycle methods (`componentDidMount`, `shouldComponentUpdate`, etc)
      1. utility methods (not event handlers, nor render methods)
@@ -145,51 +149,51 @@
      *.svg
      ```
    * add the overrides section to .eslintrc.json file:
-   ```json
-   {
-     // ...
-     "overrides": [
-       {
-         "files": [
-           "**/*.spec.js",
-           "**/*.spec.jsx",
-           "**/*.test.js",
-           "**/*.test.jsx"
-         ],
-         "env": {
-           "jest": true
+     ```json
+     {
+       // ...
+       "overrides": [
+         {
+           "files": [
+             "**/*.spec.js",
+             "**/*.spec.jsx",
+             "**/*.test.js",
+             "**/*.test.jsx"
+           ],
+           "env": {
+             "jest": true
+           }
          }
-       }
-     ]
-   }
-   ```
+       ]
+     }
+     ```
  
    **Guide for Typescript project**
     * Add following rules to `.eslintrc.json`:
-   ```json
-   {
-     // ...
-     "rules": {
-       // fix 'React was used before it was defined' error
-       "no-use-before-define": "off",
-       "@typescript-eslint/no-use-before-define": ["error"],
-       // fix 'JSX not allowed in files with extension ‘.tsx’' error
-       "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
-       // fix ‘Enum is already declared in the upper scope' error
-       "no-shadow": "off",
-       "@typescript-eslint/no-shadow": ["error"],
-       // fix 'import/extensions' error
-       "import/extensions": [
-         "error",
-         "ignorePackages",
-         {
-           "ts": "never",
-           "tsx": "never"
-         }
-       ],
-     }
-   }
-   ```
+      ```json
+      {
+        // ...
+        "rules": {
+          // fix 'React was used before it was defined'  error
+          "no-use-before-define": "off",
+          "@typescript-eslint/no-use-before-define":    ["error"],
+          // fix 'JSX not allowed in files with extension ‘. tsx’' error
+          "react/jsx-filename-extension": [ "warn",    {"extensions": [".tsx"]} ],
+          // fix ‘Enum is already declared in the upper  scope' error
+          "no-shadow": "off",
+          "@typescript-eslint/no-shadow": ["error"],
+          // fix 'import/extensions' error
+          "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "ts": "never",
+              "tsx": "never"
+            }
+          ],
+        }
+      }
+      ```
     * install [eslint-import-resolver-typescript](https://www.npmjs.com/package/eslint-import-resolver-typescript) package, in order to prevent issues with misspelling of file paths and import names:
       ```
       npm install eslint-import-resolver-typescript --save-dev
