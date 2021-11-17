@@ -52,16 +52,15 @@
    * Component with more than one prop or with children must be multiline
      * Each prop should start from the new line
      * Children should start from the new line
-     * Closing bracket of the opening tag `>` should stick to the line with last prop.
+     * Closing bracket of the opening tag `>` & self-closing `/>` tag should be placed on the new line:
        ```tsx
        <Button
          size='small'
-         onPress={onPress}>
+         onPress={onPress}
+       >
          {buttonText}
        </Button>
-       ```
-     * Self-closing `/>` tag should be placed on the new line
-       ```tsx
+
        <UserProfile
          name='Boris'
          lastName='Blade' 
