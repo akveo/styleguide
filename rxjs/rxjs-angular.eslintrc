@@ -9,7 +9,7 @@
     "rxjs/prefer-takeuntil":[
       "error",
       {
-      "checkDecorators": ["Component", "Directive", "Pipe", "Service"]
+        "checkDecorators": ["Component", "Directive", "Pipe", "Service"]
       }
     ]
   }
