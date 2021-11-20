@@ -6,7 +6,7 @@
 {
   "plugins": ["rxjs-angular"],
   "rules": {
-    "rxjs/prefer-takeuntil":[
+    "rxjs-angular/prefer-takeuntil":[
       "error",
       {
         "checkDecorators": ["Component", "Directive", "Pipe", "Service"]
