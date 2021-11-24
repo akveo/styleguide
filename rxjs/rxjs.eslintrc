@@ -1,0 +1,13 @@
+// Before use:
+// - set up eslint for typescript (if not already done)
+// - run `npm i -D eslint-plugin-rxjs`
+{
+  "plugins": ["rxjs"],
+  "extends": ["plugin:rxjs/recommended"],
+  "rules": {
+    "rxjs/no-compat": "error",
+    "rxjs/no-ignored-observable": "error",
+    "rxjs/no-exposed-subjects": "error",
+    "rxjs/no-topromise": "error"
+  }
+}

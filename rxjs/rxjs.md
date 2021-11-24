@@ -2,6 +2,11 @@
 
 Our rules are based on the linter rules for RxJs https://github.com/cartant/eslint-plugin-rxjs.
 
+Setup config and copy rules based on files:
+- [rxjs.eslintrc](./rxjs.eslintrc)
+- [rxjs-with-store.eslintrc](./rxjs-with-store.eslintrc)
+- [rxjs-angular.eslintrc](./rxjs-angular.eslintrc)
+
 ## `akveo/rxjs:recommended`
 
 This config extends the `plugin:rxjs/recommended` rule set.
