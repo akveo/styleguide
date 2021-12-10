@@ -1,4 +1,11 @@
 const rules = {
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: 'function',
+      format: [ 'camelCase', 'PascalCase' ],
+    }
+  ],
   'react/jsx-uses-react': 'error',
   'react/jsx-uses-vars': 'error',
   'react/boolean-prop-naming':
@@ -14,8 +21,7 @@ const rules = {
     { 'allowAsProps': true },
   ],
   'react/jsx-curly-spacing': [ 2, { 'when': 'never' } ],
-  'react/jsx-closing-bracket-location':
-    [ 'error', { selfClosing: 'tag-aligned' } ],
+  'react/jsx-closing-bracket-location': [ 'error', { selfClosing: 'tag-aligned', nonEmpty: 'after-props' } ],
   'react/jsx-closing-tag-location': 'error',
   'react/jsx-boolean-value': [ 'error', 'always' ],
   'react/jsx-curly-brace-presence':

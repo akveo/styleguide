@@ -2,7 +2,7 @@ const caseRules = {
   '@typescript-eslint/naming-convention': [
     'error',
     {
-      selector: [ 'class', 'interface', 'enum', 'typeParameter' ],
+      selector: [ 'class', 'interface', 'enum', 'typeParameter', 'typeAlias' ],
       format: [ 'PascalCase' ],
     },
     {
@@ -19,11 +19,11 @@ const caseRules = {
     },
     {
       selector: 'function',
-      format: [ 'camelCase', 'PascalCase' ],
+      format: [ 'camelCase' ],
     },
     {
       selector: 'variable',
-      format: [ 'camelCase', 'PascalCase', 'UPPER_CASE' ],
+      format: [ 'camelCase', 'UPPER_CASE' ],
     },
   ],
 };
@@ -55,15 +55,11 @@ const rules = {
       },
     },
   ],
-  '@typescript-eslint/prefer-readonly': 'error',
+  '@typescript-eslint/prefer-readonly': 'off',
   '@typescript-eslint/prefer-for-of': 'error',
   '@typescript-eslint/ban-ts-comment':
     [ 'error', { 'ts-ignore': 'allow-with-description' } ],
   '@typescript-eslint/no-non-null-assertion': 'error',
-  '@typescript-eslint/typedef': [ 'error', {
-    'arrowParameter': true,
-    'parameter': true,
-  } ],
   '@typescript-eslint/no-type-alias': [ 'error', {
     'allowAliases': 'in-unions-and-intersections',
   } ],
@@ -87,14 +83,18 @@ const rules = {
   '@typescript-eslint/init-declarations': [ 'error', 'always' ],
   '@typescript-eslint/keyword-spacing': [ 'error', { before: true } ],
   '@typescript-eslint/lines-between-class-members':
-    [ 'error', 'always', { 'exceptAfterOverload': true } ],
+    [
+      'error',
+      'always',
+      { 'exceptAfterSingleLine': true },
+    ],
   '@typescript-eslint/member-delimiter-style': [ 'error', {
     'multiline': {
-      'delimiter': 'none',
+      'delimiter': 'semi',
       'requireLast': true,
     },
     'singleline': {
-      'delimiter': 'comma',
+      'delimiter': 'semi',
       'requireLast': false,
     },
     'multilineDetection': 'brackets',
@@ -108,14 +108,9 @@ const rules = {
     },
   ],
   '@typescript-eslint/no-extra-semi': 'error',
-  '@typescript-eslint/no-floating-promises': 'error',
+  '@typescript-eslint/no-floating-promises': 'warn',
   '@typescript-eslint/no-for-in-array': 'error',
-  '@typescript-eslint/no-meaningless-void-operator': [
-    'error',
-    {
-      'checkNever': false,
-    },
-  ],
+
   '@typescript-eslint/no-misused-promises': [
     'error',
     {
@@ -144,15 +139,16 @@ const rules = {
   '@typescript-eslint/prefer-reduce-type-parameter': 'error',
   '@typescript-eslint/prefer-string-starts-ends-with': 'error',
   '@typescript-eslint/prefer-ts-expect-error': 'error',
-  '@typescript-eslint/promise-function-async': 'error',
   '@typescript-eslint/quotes': [ 'error', 'single' ],
   '@typescript-eslint/semi': [ 'error', 'always' ],
   '@typescript-eslint/restrict-plus-operands':
     [ 'error', { 'checkCompoundAssignments': true } ],
   '@typescript-eslint/type-annotation-spacing': 'error',
   '@typescript-eslint/indent': [ 'error', 2 ],
-  '@typescript-eslint/no-inferrable-types': 'off',
+  '@typescript-eslint/no-inferrable-types': [ 'error' ],
   '@typescript-eslint/no-shadow': 'error',
+  '@typescript-eslint/explicit-module-boundary-types': 'off',
+
 };
 
 module.exports = {
