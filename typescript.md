@@ -73,7 +73,7 @@
 
 1. #### Column limit: 80 **[⬆](#table-of-content)**
 
-   * If a line is longer than 80 symbols it should be wrapped.
+   * If a line is longer than 120 symbols it should be wrapped.
    * Line break should be placed after the operator. This does not apply to the 'dot' (which is not an operator).
    * Break lines at a **higher syntactic level**.
      * The syntactic levels from highest to lowest are as follows: assignment, division, function call, parameters, number constant.
@@ -82,7 +82,7 @@
 1. #### Vertical Whitespace **[⬆](#table-of-content)**
 
    * A single blank line appears:
-     * Between methods and properties in a class or object literal
+     * Between methods in a class or object literal. A blank line between two consecutive properties is optional. Such blank lines could be used for logical separation.
      * Inside methods bodies for logical groupings of statements. Do not put blank lines at the beginning and end of the method.
      * After import section, between class definitions.
      * Optionally before the first method in a class or object literal.
@@ -117,7 +117,6 @@
 
 1. #### Class Members **[⬆](#table-of-content)**
    
-   * Mark properties as `readonly `that are never reassigned outside of the constructor.
    * Initialize class property where it's declared.
    * Getter should be a pure function. Do not create trivial getters and setters (without any logic or decorators).
    
