@@ -1,9 +1,12 @@
 const rules = {
+  'prettier/prettier': 'off',
+  'jsx-quotes': ['error', 'prefer-single'],
   'react/jsx-uses-react': 'error',
   'react/jsx-uses-vars': 'error',
   'react/no-multi-comp': ['error', {ignoreStateless: true}],
   'react/jsx-filename-extension': ['error', {'extensions': ['.tsx', '.jsx']}],
   'react/jsx-curly-spacing': ['error', {'when': 'never'}],
+  'react/jsx-equals-spacing': ['error', 'never'],
   'react/jsx-closing-bracket-location': 'error',
   'react/jsx-closing-tag-location': 'error',
   'react/jsx-boolean-value': ['error', 'always'],
