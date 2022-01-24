@@ -82,10 +82,11 @@
 1. #### Vertical Whitespace **[⬆](#table-of-content)**
 
    * A single blank line appears:
-     * Between methods and properties in a class or object literal
+     * Between methods in a class or object literal
      * Inside methods bodies for logical groupings of statements. Do not put blank lines at the beginning and end of the method.
      * After import section, between class definitions.
      * Optionally before the first method in a class or object literal.
+     * Optionally between properties in a class or object literal for logical grouping.
    * Multiple blank lines are permitted, but never required (nor encouraged).
 
 1. #### Horizontal whitespace **[⬆](#table-of-content)**
