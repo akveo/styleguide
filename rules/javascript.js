@@ -76,11 +76,16 @@ const rules = {
       prev: 'import',
       next: 'import'
     }
-    ],
+  ],
+  'deprecation/deprecation': 'warn',
 }
 
 module.exports = {
   rules,
+  plugins: [
+    // npm i -D eslint-plugin-deprecation
+    'deprecation',
+  ],
   extends: [
     'eslint:recommended',
   ],
