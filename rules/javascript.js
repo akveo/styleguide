@@ -47,20 +47,17 @@ const rules = {
   'brace-style': 'error',
   'no-redeclare': 'error',
   'no-extra-semi': 'error',
-  'no-unused-vars': ['error',{ 'argsIgnorePattern' : '^_' }],
+  'no-unused-vars': ['error',
+    {
+      argsIgnorePattern: '^_',
+      varsIgnorePattern: '^_',
+      ignoreRestSiblings: true,
+    }],
   'no-empty-function': 'error',
   'no-duplicate-imports': 'error',
   'func-call-spacing': 'error',
-  'comma-dangle': [ 'error', {
-    'arrays': 'only-multiline',
-    'objects': 'only-multiline',
-    'imports': 'only-multiline',
-    'exports': 'only-multiline',
-    'functions': 'never',
-  } ],
+  'comma-dangle': [ 'error', 'always-multiline' ],
   'quotes': [ 'error', 'single' ],
-  'lines-between-class-members': [ 'error', 'always' ],
-  'init-declarations': [ 'error', 'always' ],
   'key-spacing': 'error',
   'comma-spacing': 'error',
   'no-shadow':'error',
@@ -76,11 +73,16 @@ const rules = {
       prev: 'import',
       next: 'import'
     }
-    ],
+  ],
+  'deprecation/deprecation': 'warn',
 }
 
 module.exports = {
   rules,
+  plugins: [
+    // npm i -D eslint-plugin-deprecation
+    'deprecation',
+  ],
   extends: [
     'eslint:recommended',
   ],

@@ -1,15 +1,20 @@
 const rules = {
   '@typescript-eslint/prefer-readonly': 'off',
   '@typescript-eslint/prefer-for-of': 'error',
-  '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
+  '@typescript-eslint/ban-ts-comment': ['error', {'ts-ignore': 'allow-with-description'}],
 
   'no-unused-vars': 'off',
-  '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }], // TODO: add to styleguide exception regarding args starting with _
+  '@typescript-eslint/no-unused-vars': ['error',
+    {
+      argsIgnorePattern: '^_',
+      varsIgnorePattern: '^_',
+      ignoreRestSiblings: true,
+    }], // TODO: add to styleguide exception regarding args starting with _
 
   '@typescript-eslint/no-non-null-assertion': 'error',
-  '@typescript-eslint/no-explicit-any': ['error', { ignoreRestArgs: true }], // TODO: probably should warn
+  '@typescript-eslint/no-explicit-any': ['error'],
   '@typescript-eslint/await-thenable': 'error',
-  '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
+  '@typescript-eslint/explicit-function-return-type': ['error', {allowExpressions: true}],
 
   'brace-style': 'off',
   '@typescript-eslint/brace-style': ['error'],
@@ -19,9 +24,6 @@ const rules = {
 
   'keyword-spacing': 'off',
   '@typescript-eslint/keyword-spacing': ['error', {before: true}],
-
-  'lines-between-class-members': 'off',
-  '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 
   '@typescript-eslint/member-delimiter-style': 'error',
 
@@ -66,6 +68,12 @@ const rules = {
   'no-shadow': 'off',
   '@typescript-eslint/no-shadow': 'error',
 
+  'comma-dangle': 'off',
+  '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+
+  'quotes': 'off',
+  '@typescript-eslint/quotes': ['error', 'single'],
+
   'padding-line-between-statements': 'off',
   '@typescript-eslint/padding-line-between-statements': [
     'error',
@@ -79,14 +87,17 @@ const rules = {
       prev: 'import',
       next: 'import'
     }
-  ]
+  ],
+
+  'no-invalid-this': 'off',
+  '@typescript-eslint/no-invalid-this': 'error',
 }
 
 module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
-    './javascript.js',
     'plugin:@typescript-eslint/recommended',
+    './javascript.js',
   ],
   rules,
 };
