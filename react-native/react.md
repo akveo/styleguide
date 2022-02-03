@@ -86,14 +86,16 @@
    
 
 1. #### Ternary operators inside JSX
+   * Try to avoid ternary operators inside JSX as it can quickly became unreadable. Better extract a function and use `if` statement.
    * Do not use ternary operator when one of the return expressions is `null`. Instead, use Short Circuit Evaluation:
    ```tsx
    {hasIcon && <Icon />}
    ```
-   * Do not use ternary operator inside jsx with complex components. Put only render methods or component variables:
+   * Do not use ternary operator inside jsx with complex components. Put only render methods or single line JSX expressions inside ternary operator.
    ```tsx
-   {isAuthenticated ? renderAuthFlow() : signInComponent}
+   {isAuthenticated ? renderAuthFlow() : <SignIn />}
    ```
+   * Nested ternary operators inside jsx are not allowed.
 
 ## Component Structure
 
