@@ -5,7 +5,7 @@ const rules = {
   'semi-style': [ 'error', 'last' ],
   'semi-spacing': 'error',
   'comma-style': [ 'error', 'last' ],
-  'max-len': [ 'error', { code: 100 } ],
+  'max-len': [ 'error', { code: 120 } ],
   'keyword-spacing': [ 'error', { before: true } ],
   'space-infix-ops': 'error',
   'space-unary-ops': 'error',
