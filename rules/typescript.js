@@ -91,6 +91,37 @@ const rules = {
 
   'no-invalid-this': 'off',
   '@typescript-eslint/no-invalid-this': 'error',
+
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: [ 'class', 'interface', 'enum', 'typeParameter', 'typeAlias' ],
+      format: [ 'PascalCase' ],
+    },
+    {
+      selector: [
+        'classMethod',
+        'classProperty',
+        'typeProperty',
+        'typeMethod',
+        'typeAlias',
+        'parameter',
+      ],
+      format: [ 'camelCase' ],
+    },
+    {
+      selector: [ 'enumMember' ],
+      format: [ 'UPPER_CASE', 'PascalCase' ],
+    },
+    {
+      selector: 'function',
+      format: [ 'camelCase' ],
+    },
+    {
+      selector: 'variable',
+      format: [ 'camelCase', 'UPPER_CASE' ],
+    },
+  ],
 }
 
 module.exports = {
