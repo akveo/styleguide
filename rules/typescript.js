@@ -95,7 +95,13 @@ const rules = {
   '@typescript-eslint/naming-convention': [
     'error',
     {
-      selector: [ 'class', 'interface', 'enum', 'typeParameter', 'typeAlias' ],
+      selector: [
+        'class',
+        'interface',
+        'enum',
+        'typeParameter',
+        'typeAlias'
+      ],
       format: [ 'PascalCase' ],
     },
     {
@@ -104,22 +110,37 @@ const rules = {
         'classProperty',
         'typeProperty',
         'typeMethod',
-        'typeAlias',
         'parameter',
       ],
       format: [ 'camelCase' ],
     },
     {
+      selector: ['typeAlias'],
+      format: [
+        'PascalCase',
+        'camelCase'
+      ],
+    },
+    {
       selector: [ 'enumMember' ],
-      format: [ 'UPPER_CASE', 'PascalCase' ],
+      format: [
+        'UPPER_CASE',
+        'PascalCase'
+      ],
     },
     {
       selector: 'function',
-      format: [ 'camelCase' ],
+      format: [
+        'camelCase',
+        'PascalCase'
+      ],
     },
     {
       selector: 'variable',
-      format: [ 'camelCase', 'UPPER_CASE' ],
+      format: [
+        'camelCase',
+        'UPPER_CASE'
+      ],
     },
   ],
 }
