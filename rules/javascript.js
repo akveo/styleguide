@@ -75,6 +75,14 @@ const rules = {
     }
   ],
   'deprecation/deprecation': 'warn',
+  'array-bracket-spacing': [
+    'error',
+    'always',
+  ],
+  'object-curly-spacing': [
+    'error',
+    'always',
+  ]
 }
 
 module.exports = {
