@@ -28,7 +28,12 @@
 | global constant values  | CONSTANT_CASE |
 | static readonly values  | CONSTANT_CASE |
 
-* Do not use `_` or other prefixes.
+* Prefixes are forbidden with one exception. You can use prefix `_` for variables that should be ignored:
+```typescript
+someArray.forEach((_item, index) => {
+  // we need only index here
+});
+```
 * Generics parameters like `Array<T>` should use a single uppercase character.
 
 ## Formatting
