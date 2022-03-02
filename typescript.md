@@ -95,7 +95,7 @@
    
    A single internal space appears in the following places:
    * Separating any reserved word (such as `if`, `for`, or `catch`) except for `function` and `super`, from an open parenthesis (`(`) that follows it on that line.
-   * Separating any reserved word (such as `else` or `catch`) from a closing curly brace (`}`) that precedes it on that line.
+   * Separating `case` from a closing curly brace (`}`) that precedes it on that line.
    * After opening curly brace `{` and before closing `}` curly brace when it's a single property object literal: `{ name: 'John' }`, `{ lastname }`, `{ ...data }`.
    * After opening bracket `[` and before closing `]` bracket: `[ 4, 5, 6 ]`, `[ ...data ]`.
    * Before any open curly brace (`{`), with two exceptions:
@@ -171,6 +171,7 @@
 1. #### Switch statement **[⬆](#table-of-content)**
    
    * All `switch` statements must contain a `default` statement, even if it contains no code.
+   * Each case in a `switch` statement must be wrapped in a `{}` block.
    
 1. #### Equality Checks **[⬆](#table-of-content)**
    
