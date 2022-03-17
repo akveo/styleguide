@@ -7,7 +7,7 @@
   "rules": {
     "rxjs/no-compat": "error",
     "rxjs/no-ignored-observable": "error",
-    "rxjs/no-exposed-subjects": "error",
+    "rxjs/no-exposed-subjects": ["error", { "allowProtected": true }],
     "rxjs/no-topromise": "error"
   }
 }
