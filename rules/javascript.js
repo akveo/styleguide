@@ -47,12 +47,7 @@ const rules = {
   'brace-style': 'error',
   'no-redeclare': 'error',
   'no-extra-semi': 'error',
-  'no-unused-vars': ['error',
-    {
-      argsIgnorePattern: '^_',
-      varsIgnorePattern: '^_',
-      ignoreRestSiblings: true,
-    }],
+  'no-unused-vars': ['error', { 'ignoreRestSiblings': true }],
   'no-empty-function': 'error',
   'no-duplicate-imports': 'error',
   'func-call-spacing': 'error',
