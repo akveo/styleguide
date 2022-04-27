@@ -10,4 +10,4 @@ As a styleguide we must follow generic approaches described by Angular team. [Th
 
 We must use [ESLint](https://github.com/angular-eslint/angular-eslint) to enable linting for Angular projects according to styleguides.
 
-Set up linting rules based on [angular.eslintrc](./angular.eslintrc) config.
+Set up linting rules for `*.ts` files based on [angular.eslintrc](./angular.eslintrc). For `*.html` files use rules based on [angular-template.eslintrc](./angular-template.eslintrc).
