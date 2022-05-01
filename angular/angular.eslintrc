@@ -1,47 +1,29 @@
 // Angular eslint setup https://github.com/angular-eslint/angular-eslint
 {
-  "overrides": [
-    {
-      "files": ["*.ts"],
-      "extends": [
-        "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
-      ],
-      "rules": {
-        "@angular-eslint/component-max-inline-declarations": "error",
-        "@angular-eslint/contextual-decorator": "error",
-        "@angular-eslint/no-attribute-decorator": "error",
-        "@angular-eslint/no-lifecycle-call": "error",
-        "@angular-eslint/no-queries-metadata-property": "error",
-        "@angular-eslint/prefer-on-push-component-change-detection": "error",
-        "@angular-eslint/prefer-output-readonly": "error",
-        "@angular-eslint/relative-url-prefix": "error",
-        "@angular-eslint/use-component-selector": "error",
-        "@angular-eslint/use-component-view-encapsulation": "error",
+  "extends": [
+    "plugin:@angular-eslint/recommended",
+    "plugin:@angular-eslint/template/process-inline-templates"
+  ],
+  "rules": {
+    "@angular-eslint/component-max-inline-declarations": "error",
+    "@angular-eslint/contextual-decorator": "error",
+    "@angular-eslint/no-attribute-decorator": "error",
+    "@angular-eslint/no-lifecycle-call": "error",
+    "@angular-eslint/no-queries-metadata-property": "error",
+    "@angular-eslint/prefer-on-push-component-change-detection": "error",
+    "@angular-eslint/prefer-output-readonly": "error",
+    "@angular-eslint/relative-url-prefix": "error",
+    "@angular-eslint/use-component-selector": "error",
+    "@angular-eslint/use-component-view-encapsulation": "error",
 
-        // Project specific
-        "@angular-eslint/directive-selector": [
-          "error",
-          { "type": "attribute", "prefix": "app", "style": "camelCase" }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          { "type": "element", "prefix": "app", "style": "kebab-case" }
-        ]
-      }
-    },
-    {
-      "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended"],
-      "rules": {
-        "@angular-eslint/template/accessibility-valid-aria": "error",
-        "@angular-eslint/template/conditional-complexity": "error",
-        "@angular-eslint/template/cyclomatic-complexity": "error",
-        "@angular-eslint/template/no-call-expression": "error",
-        "@angular-eslint/template/no-duplicate-attributes": "error",
-        "@angular-eslint/template/no-positive-tabindex": "error",
-        "@angular-eslint/template/use-track-by-function": "error"
-      }
-    }
-  ]
+    // Project specific
+    "@angular-eslint/directive-selector": [
+      "error",
+      { "type": "attribute", "prefix": "app", "style": "camelCase" }
+    ],
+    "@angular-eslint/component-selector": [
+      "error",
+      { "type": "element", "prefix": "app", "style": "kebab-case" }
+    ]
+  }
 }
