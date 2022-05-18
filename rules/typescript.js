@@ -4,12 +4,7 @@ const rules = {
   '@typescript-eslint/ban-ts-comment': ['error', {'ts-ignore': 'allow-with-description'}],
 
   'no-unused-vars': 'off',
-  '@typescript-eslint/no-unused-vars': ['error',
-    {
-      argsIgnorePattern: '^_',
-      varsIgnorePattern: '^_',
-      ignoreRestSiblings: true,
-    }], // TODO: add to styleguide exception regarding args starting with _
+  '@typescript-eslint/no-unused-vars': ['error', { 'ignoreRestSiblings': true }],
 
   '@typescript-eslint/no-non-null-assertion': 'error',
   '@typescript-eslint/no-explicit-any': ['error'],
