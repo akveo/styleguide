@@ -1,0 +1,48 @@
+{
+  "name": "eslint-config-akveo",
+  "version": "1.0.0",
+  "description": "Akveo's ESLint config based on styleguide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./angular": "./angular.js",
+    "./react": "./react.js",
+    "./react-native": "./react-native.js",
+    "./rxjs": "./rxjs.js",
+    "./rules/javascript": "./rules/javascript.js",
+    "./rules/typescript": "./rules/typescript.js",
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "style guide",
+    "lint",
+    "akveo",
+    "angular",
+    "typescript",
+    "rxjs",
+    "react",
+    "react-native",
+    "java",
+    "es6",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018"
+  ],
+  "peerDependencies": {
+    "eslint": "^8.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akveo/styleguide.git"
+  },
+  "author": "akveo <contact@akveo.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akveo/styleguide/issues"
+  },
+  "homepage": "https://github.com/akveo/styleguide#readme"
+}
