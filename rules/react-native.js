@@ -3,13 +3,13 @@ const rules = {
   'react-native/no-color-literals': 'off',
   'react-native/no-raw-text': 'error',
   'react-native/no-single-element-style-arrays': 'error',
-}
+};
 
 module.exports = {
   rules,
   plugins: [
     'react',
-    'react-native'
+    'react-native',
   ],
   extends: [
     './react.js',
@@ -19,7 +19,7 @@ module.exports = {
       'jsx': true,
     },
   },
-  env:{
+  env: {
     'react-native/react-native': true,
-  }
-}
+  },
+};
