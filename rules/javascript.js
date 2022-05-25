@@ -47,7 +47,7 @@ const rules = {
   'brace-style': 'error',
   'no-redeclare': 'error',
   'no-extra-semi': 'error',
-  'no-unused-vars': ['error', { 'ignoreRestSiblings': true }],
+  'no-unused-vars': [ 'error', { 'ignoreRestSiblings': true } ],
   'no-empty-function': 'error',
   'no-duplicate-imports': 'error',
   'func-call-spacing': 'error',
@@ -55,19 +55,19 @@ const rules = {
   'quotes': [ 'error', 'single' ],
   'key-spacing': 'error',
   'comma-spacing': 'error',
-  'no-shadow':'error',
+  'no-shadow': 'error',
   'padding-line-between-statements': [
     'error',
     {
       blankLine: 'always',
       prev: 'import',
-      next: '*'
+      next: '*',
     },
     {
       blankLine: 'any',
       prev: 'import',
-      next: 'import'
-    }
+      next: 'import',
+    },
   ],
   'deprecation/deprecation': 'warn',
   'array-bracket-spacing': [
@@ -77,8 +77,8 @@ const rules = {
   'object-curly-spacing': [
     'error',
     'always',
-  ]
-}
+  ],
+};
 
 module.exports = {
   rules,
@@ -89,4 +89,4 @@ module.exports = {
   extends: [
     'eslint:recommended',
   ],
-}
+};
