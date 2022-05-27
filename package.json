@@ -11,9 +11,8 @@
     "./angular": "./angular.js",
     "./react": "./react.js",
     "./react-native": "./react-native.js",
-    "./rxjs": "./rxjs.js",
-    "./rules/javascript": "./rules/javascript.js",
-    "./rules/typescript": "./rules/typescript.js",
+    "./rules/javascript": "./typescript/javascript.js",
+    "./rules/typescript": "./typescript/typescript.js",
     "./package.json": "./package.json"
   },
   "keywords": [

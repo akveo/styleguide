@@ -3,12 +3,13 @@ module.exports = {
   overrides: [
     {
       files: ["*.ts"],
-      extends: ["./typescript/typescript", "./rxjs", "./angular/angular.eslintrc"],
+      extends: ["./typescript/typescript", "./angular/angular.js"],
     },
     {
       files: ["*.html"],
-      extends: ["./angular/angular-template.eslintrc"],
+      extends: ["./angular/angular-template.js"],
     },
+   
   ],
   rules: {},
 };

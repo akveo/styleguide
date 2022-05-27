@@ -1,11 +1,7 @@
 // Angular eslint setup https://github.com/angular-eslint/angular-eslint
-{
-  "extends": [
-    "plugin:@angular-eslint/recommended",
-    "plugin:@angular-eslint/template/process-inline-templates"
-  ],
-  "rules": {
-    "@angular-eslint/component-max-inline-declarations": "error",
+
+const rules = {
+  "@angular-eslint/component-max-inline-declarations": "error",
     "@angular-eslint/contextual-decorator": "error",
     "@angular-eslint/no-attribute-decorator": "error",
     "@angular-eslint/no-lifecycle-call": "error",
@@ -24,6 +20,32 @@
     "@angular-eslint/component-selector": [
       "error",
       { "type": "element", "prefix": "app", "style": "kebab-case" }
-    ]
-  }
-}
+    ],
+
+    //rxJs
+
+    'rxjs/no-compat': 'error',
+    'rxjs/no-ignored-observable': 'error',
+    'rxjs/no-exposed-subjects': ['error', { allowProtected: true }],
+    'rxjs/no-topromise': 'error',
+    'rxjs/no-cyclic-action': 'error',
+    'rxjs/no-unsafe-catch': 'error',
+    'rxjs/no-unsafe-first': 'error',
+    'rxjs/no-unsafe-switchmap': 'error',
+    'rxjs-angular/prefer-takeuntil': [
+      'error',
+      {
+        checkDecorators: ['Component', 'Directive', 'Pipe', 'Injectable'],
+        checkDestroy: false,
+      },
+    ],
+};
+
+module.exports = {
+  rules,
+  plugins: ["rxjs", "rxjs-angular"],
+  extends: [
+    'plugin:@angular-eslint/recommended',
+    'plugin:rxjs/recommended'
+  ],
+};
