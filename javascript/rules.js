@@ -1,15 +1,15 @@
 const rules = {
   'prettier/prettier': 'off',
   'curly': 'error',
-  'operator-linebreak': [ 'error', 'after' ],
-  'semi-style': [ 'error', 'last' ],
+  'operator-linebreak': ['error', 'after'],
+  'semi-style': ['error', 'last'],
   'semi-spacing': 'error',
-  'comma-style': [ 'error', 'last' ],
-  'max-len': [ 'error', { code: 120 } ],
-  'keyword-spacing': [ 'error', { before: true } ],
+  'comma-style': ['error', 'last'],
+  'max-len': ['error', { code: 120 }],
+  'keyword-spacing': ['error', { before: true }],
   'space-infix-ops': 'error',
   'space-unary-ops': 'error',
-  'space-in-parens': [ 'error', 'never' ],
+  'space-in-parens': ['error', 'never'],
   'no-new-wrappers': 'error',
   'no-new-object': 'error',
   'no-new-func': 'error',
@@ -20,16 +20,20 @@ const rules = {
   'prefer-const': 'error',
   'no-throw-literal': 'error',
   'default-case': 'error',
-  'eqeqeq': [ 'error', 'smart' ],
-  'func-style': [ 'error', 'declaration', { 'allowArrowFunctions': true } ],
+  'eqeqeq': ['error', 'smart'],
+  'func-style': ['error', 'declaration', { 'allowArrowFunctions': true }],
   'prefer-arrow-callback': 'error',
   'array-callback-return': 'error',
-  'indent': [ 'error', 2 ], // TODO: Rule has much more options. It's worth to adjust them.
+  // TODO: Rule has much more options. It's worth to adjust them.
+  'indent': ['error', 2],
   'no-unneeded-ternary': 'error',
-  'no-restricted-syntax': [ 'error', {
-    'selector': 'ExportDefaultDeclaration',
-    'message': 'Prefer named exports',
-  } ],
+  'no-restricted-syntax': [
+    'error',
+    {
+      'selector': 'ExportDefaultDeclaration',
+      'message': 'Prefer named exports',
+    }
+  ],
   'no-template-curly-in-string': 'error',
   'no-constructor-return': 'error',
   'no-extra-bind': 'error',
@@ -43,21 +47,23 @@ const rules = {
   'no-new': 'error',
   'no-self-compare': 'error',
   'no-useless-call': 'error',
-  'semi': [ 'error', 'always' ],
+  'semi': ['error', 'always'],
   'brace-style': 'error',
   'no-redeclare': 'error',
   'no-extra-semi': 'error',
-  'no-unused-vars': ['error',
+  'no-unused-vars': [
+    'error',
     {
       argsIgnorePattern: '^_',
       varsIgnorePattern: '^_',
       ignoreRestSiblings: true,
-    }],
+    }
+  ],
   'no-empty-function': 'error',
   'no-duplicate-imports': 'error',
   'func-call-spacing': 'error',
-  'comma-dangle': [ 'error', 'always-multiline' ],
-  'quotes': [ 'error', 'single' ],
+  'comma-dangle': ['error', 'always-multiline'],
+  'quotes': ['error', 'single'],
   'key-spacing': 'error',
   'comma-spacing': 'error',
   'no-shadow':'error',
@@ -74,7 +80,6 @@ const rules = {
       next: 'import'
     }
   ],
-  'deprecation/deprecation': 'warn',
   'array-bracket-spacing': [
     'error',
     'always',
@@ -87,10 +92,6 @@ const rules = {
 
 module.exports = {
   rules,
-  plugins: [
-    // npm i -D eslint-plugin-deprecation
-    'deprecation',
-  ],
   extends: [
     'eslint:recommended',
   ],

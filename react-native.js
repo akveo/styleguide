@@ -1,7 +1,7 @@
 module.exports = {
-	extends: [
-		'./typescript/typescript',
-		'./react-native/react-native',
-	].map(require.resolve),
-	rules: {}
+  extends: [
+    './typescript/rules-typescript',
+    './react-native/rules',
+  ].map(require.resolve),
+  rules: {}
 };

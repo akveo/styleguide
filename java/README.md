@@ -1,17 +1,33 @@
+# Akveo Java styleguide
+
+## Table of content
+1. [Java Syntax](#java-syntax)
+
+### Java Syntax
+1. As a code style guide  we should use the [approach](https://google.github.io/styleguide/javaguide.html) from the Google team.
+   You can install this rules for IDEs using google's GitHub:
+   * [Intellij idea](https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml)
+   * [Eclipse settings](https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml)
+
 # Akveo Spring styleguide
 
 ## Table of content
 
-1. [Project Structure](#project-structure)
-2. [Spring syntax rules](#spring-syntax-rules)
-3. [External Libraries](#external-libraries)
+- [Akveo Java styleguide](#akveo-java-styleguide)
+  - [Table of content](#table-of-content)
+    - [Java Syntax](#java-syntax)
+- [Akveo Spring styleguide](#akveo-spring-styleguide)
+  - [Table of content](#table-of-content-1)
+    - [Project Structure](#project-structure)
+    - [Spring syntax rules](#spring-syntax-rules)
+    - [External libraries](#external-libraries)
 
 
 ### Project Structure
 1. Initial project structure should be corresponded with [Maven standard directory layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 2. Project components should be divided by feature. For example:
 ```
-com.demo.project 
+com.demo.project
 └───user
 │   │
 │   └───component
@@ -23,7 +39,7 @@ com.demo.project
 │   │   │UserService.java
 │   │   │UserPaymentService.java
 │   │   │ ...
-│   │  
+│   │
 │   └───model
 │       │User.java
 │         ...

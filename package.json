@@ -11,8 +11,6 @@
     "./angular": "./angular.js",
     "./react": "./react.js",
     "./react-native": "./react-native.js",
-    "./rules/javascript": "./typescript/javascript.js",
-    "./rules/typescript": "./typescript/typescript.js",
     "./package.json": "./package.json"
   },
   "keywords": [
@@ -38,10 +36,10 @@
     "type": "git",
     "url": "git+https://github.com/akveo/styleguide.git"
   },
-  "author": "akveo <contact@akveo.com>",
+  "author": "Akveo <contact@akveo.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/akveo/styleguide/issues"
   },
-  "homepage": "https://github.com/akveo/styleguide#readme"
+  "homepage": "https://github.com/akveo/styleguide"
 }
