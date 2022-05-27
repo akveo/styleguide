@@ -152,7 +152,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     'plugin:@typescript-eslint/recommended',
-    './javascript/rules.js',
+    '../javascript/rules.js',
   ],
   rules,
 };

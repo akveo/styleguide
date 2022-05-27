@@ -3,7 +3,7 @@ module.exports = {
   overrides: [
     {
       files: ["*.ts"],
-      extends: ["./typescript/rules-typescript", "./angular/rules.js"],
+      extends: ["./typescript/rules", "./angular/rules.js"],
     },
     {
       files: ["*.html"],

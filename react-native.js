@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    './typescript/rules-typescript',
+    './typescript/rules',
     './react-native/rules',
   ].map(require.resolve),
   rules: {}
