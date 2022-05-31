@@ -66,19 +66,19 @@ const rules = {
   'quotes': ['error', 'single'],
   'key-spacing': 'error',
   'comma-spacing': 'error',
-  'no-shadow':'error',
+  'no-shadow': 'error',
   'padding-line-between-statements': [
     'error',
     {
       blankLine: 'always',
       prev: 'import',
-      next: '*'
+      next: '*',
     },
     {
       blankLine: 'any',
       prev: 'import',
-      next: 'import'
-    }
+      next: 'import',
+    },
   ],
   'array-bracket-spacing': [
     'error',
@@ -87,12 +87,12 @@ const rules = {
   'object-curly-spacing': [
     'error',
     'always',
-  ]
-}
+  ],
+};
 
 module.exports = {
   rules,
   extends: [
     'eslint:recommended',
   ],
-}
+};

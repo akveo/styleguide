@@ -6,20 +6,20 @@ const rules = {
   'react/jsx-curly-spacing': ['error', { 'when': 'never' }],
   'react/jsx-closing-bracket-location': 'error',
   'react/jsx-closing-tag-location': 'error',
-  'react/jsx-boolean-value': ['error', 'always'],
+  'react/jsx-boolean-value': [ 'error', 'always' ],
   'react/jsx-curly-brace-presence':
     [
       'error',
       {
         props: 'never',
         children: 'never',
-      }
+      },
     ],
   'react/require-render-return': 'error',
   'react/jsx-curly-newline': 'error',
   'react/jsx-first-prop-new-line': 'error',
-  'react/jsx-fragments': ['error', 'syntax'],
-  'react/jsx-indent-props': ['error', 2],
+  'react/jsx-fragments': [ 'error', 'syntax' ],
+  'react/jsx-indent-props': [ 'error', 2 ],
   'react/jsx-key': 'error',
   'react/jsx-max-props-per-line': ['error', { 'maximum': 1 }],
   'react/jsx-no-bind': ['error', { 'allowArrowFunctions': true }],
@@ -36,7 +36,7 @@ const rules = {
       'beforeSelfClosing': 'always',
       'afterOpening': 'never',
       'beforeClosing': 'never',
-    }
+    },
   ],
   'react/jsx-wrap-multilines': [
     'error',
@@ -48,7 +48,7 @@ const rules = {
       condition: 'parens-new-line',
       logical: 'parens-new-line',
       prop: 'parens-new-line',
-    }
+    },
   ],
   'react/no-access-state-in-setstate': 'error',
   'react/no-children-prop': 'error',
@@ -64,12 +64,12 @@ const rules = {
   'react/no-unknown-property': 'error',
   'react/prefer-es6-class': 'error',
   'react/self-closing-comp': 'error',
-  'react/style-prop-object': 'error'
-}
+  'react/style-prop-object': 'error',
+};
 
 module.exports = {
   rules,
-  plugins: ['react'],
+  plugins: [ 'react' ],
   extends: [
     'plugin:react/recommended',
     // INFO: For React 17.0 version and higher
@@ -80,4 +80,4 @@ module.exports = {
       'jsx': true,
     },
   },
-}
+};
