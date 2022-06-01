@@ -3,5 +3,5 @@ module.exports = {
     './typescript/rules',
     './react/rules',
   ].map(require.resolve),
-  rules: {}
+  rules: {},
 };

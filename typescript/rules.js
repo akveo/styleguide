@@ -1,7 +1,7 @@
 const rules = {
   '@typescript-eslint/prefer-readonly': 'off',
   '@typescript-eslint/prefer-for-of': 'error',
-  '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
+  '@typescript-eslint/ban-ts-comment': [ 'error', { 'ts-ignore': 'allow-with-description' } ],
 
   'no-unused-vars': 'off',
   // TODO: add to styleguide exception regarding args starting with '_'
@@ -11,13 +11,13 @@ const rules = {
       argsIgnorePattern: '^_',
       varsIgnorePattern: '^_',
       ignoreRestSiblings: true,
-    }
+    },
   ],
 
   '@typescript-eslint/no-non-null-assertion': 'error',
   '@typescript-eslint/no-explicit-any': [ 'error' ],
   '@typescript-eslint/await-thenable': 'error',
-  '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
+  '@typescript-eslint/explicit-function-return-type': [ 'error', { allowExpressions: true } ],
 
   'brace-style': 'off',
   '@typescript-eslint/brace-style': [ 'error' ],
@@ -26,7 +26,7 @@ const rules = {
   '@typescript-eslint/comma-spacing': [ 'error' ],
 
   'keyword-spacing': 'off',
-  '@typescript-eslint/keyword-spacing': ['error', { before: true }],
+  '@typescript-eslint/keyword-spacing': [ 'error', { before: true } ],
 
   '@typescript-eslint/member-delimiter-style': 'error',
 
@@ -62,7 +62,7 @@ const rules = {
   'semi': 'off',
   '@typescript-eslint/semi': [ 'error', 'always' ],
 
-  '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
+  '@typescript-eslint/restrict-plus-operands': [ 'error', { checkCompoundAssignments: true } ],
   '@typescript-eslint/type-annotation-spacing': 'error',
 
   'indent': 'off',
@@ -105,7 +105,7 @@ const rules = {
         'typeParameter',
         'typeAlias',
       ],
-      format: ['PascalCase'],
+      format: [ 'PascalCase' ],
     },
     {
       selector: [
@@ -115,7 +115,7 @@ const rules = {
         'typeMethod',
         'parameter',
       ],
-      format: ['camelCase'],
+      format: [ 'camelCase' ],
     },
     {
       selector: [ 'typeAlias' ],
@@ -125,7 +125,7 @@ const rules = {
       ],
     },
     {
-      selector: ['enumMember'],
+      selector: [ 'enumMember' ],
       format: [
         'UPPER_CASE',
         'PascalCase',

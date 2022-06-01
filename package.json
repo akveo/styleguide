@@ -4,7 +4,9 @@
   "description": "Akveo's ESLint config based on styleguide",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "exports": {
     ".": "./index.js",
@@ -41,5 +43,9 @@
   "bugs": {
     "url": "https://github.com/akveo/styleguide/issues"
   },
-  "homepage": "https://github.com/akveo/styleguide"
+  "homepage": "https://github.com/akveo/styleguide",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
 }

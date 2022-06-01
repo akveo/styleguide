@@ -1,4 +1,4 @@
-rules = {
+const rules = {
   '@angular-eslint/template/accessibility-valid-aria': 'error',
   '@angular-eslint/template/conditional-complexity': 'error',
   '@angular-eslint/template/cyclomatic-complexity': 'error',
@@ -9,5 +9,5 @@ rules = {
 };
 module.exports = {
   rules,
-  extends: ['plugin:@angular-eslint/template/recommended'],
+  extends: [ 'plugin:@angular-eslint/template/recommended' ],
 };
