@@ -1,21 +1,15 @@
 # Akveo style guides
 
-- [Angular](./angular/angular-styleguide.md)
-- [React](./react/react-styleguide.md)
-- [React Native](./react-native/react-native-styleguide.md)
-- [Java](./java/java-styleguide.md)
-- [Java Spring](./java/spring-styleguide.md)
-- [TypeScript](./typescript/typescript-styleguide.md)
-- [RxJs](./rxjs/rxjs-styleguide.md)
+- [Angular](./angular/README.md)
+- [React](./react/README.md)
+- [React Native](./react-native/README.md)
+- [Java](./java/README.md)
+- [TypeScript](./typescript/README.md)
+- [RxJs](./rxjs/README.md)
 
-## Linters
-
-Es lint rules can be found in the respective folders
-
-## Before use
+## Intall
 * run a basic lint install for your platform
-* run  npm i eslint-plugin-deprecation,
-* to use angular configs run  npm i eslint-plugin-rxjs eslint-plugin-rxjs-angular
+* to use angular configs run `npm i eslint-plugin-rxjs eslint-plugin-rxjs-angular`
 
 # How to apply
 add the necessary confing to the "extends" array of eslintrc.json :

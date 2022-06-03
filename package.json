@@ -1,51 +1,46 @@
 {
   "name": "eslint-config-akveo",
   "version": "1.0.0",
-  "description": "Akveo's ESLint config based on styleguide",
-  "main": "index.js",
+  "description": "ESLint shareable config for the Akveo style",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix"
   },
   "exports": {
-    ".": "./index.js",
     "./angular": "./angular.js",
     "./react": "./react.js",
-    "./react-native": "./react-native.js",
-    "./package.json": "./package.json"
+    "./react-native": "./react-native.js"
   },
   "keywords": [
-    "style guide",
-    "lint",
     "akveo",
-    "angular",
+    "eslint",
+    "linter",
+    "code",
+    "quality",
+    "style",
     "typescript",
+    "angular",
     "rxjs",
     "react",
-    "react-native",
-    "java",
-    "es6",
-    "es2015",
-    "es2016",
-    "es2017",
-    "es2018"
+    "react-native"
   ],
   "peerDependencies": {
-    "eslint": "^8.15.0"
+    "eslint": "^8.16.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akveo/styleguide.git"
   },
-  "author": "Akveo <contact@akveo.com>",
+  "author": "Akveo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/akveo/styleguide/issues"
   },
-  "homepage": "https://github.com/akveo/styleguide",
+  "homepage": "https://github.com/akveo/styleguide#readme",
   "dependencies": {
-    "eslint-plugin-deprecation": "^1.3.2",
     "eslint-plugin-rxjs": "^5.0.2",
     "eslint-plugin-rxjs-angular": "^2.0.0"
   },

@@ -9,5 +9,5 @@ const rules = {
 };
 module.exports = {
   rules,
-  extends: [ 'plugin:@angular-eslint/template/recommended' ],
+  extends: ['plugin:@angular-eslint/template/recommended'],
 };

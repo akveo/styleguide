@@ -89,7 +89,7 @@
         "next": "import"
       }
     ],
-    "array-bracket-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
     "object-curly-spacing": ["error", "always"]
   }
 }

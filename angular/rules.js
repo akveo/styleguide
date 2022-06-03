@@ -22,7 +22,7 @@ const rules = {
   // RxJS
   'rxjs/no-compat': 'error',
   'rxjs/no-ignored-observable': 'error',
-  'rxjs/no-exposed-subjects': [ 'error', { allowProtected: true } ],
+  'rxjs/no-exposed-subjects': ['error', { allowProtected: true }],
   'rxjs/no-topromise': 'error',
 
   'rxjs/no-cyclic-action': 'error',
@@ -33,7 +33,7 @@ const rules = {
   'rxjs-angular/prefer-takeuntil': [
     'error',
     {
-      checkDecorators: [ 'Component', 'Directive', 'Pipe', 'Injectable' ],
+      checkDecorators: ['Component', 'Directive', 'Pipe', 'Injectable'],
       checkDestroy: false,
     },
   ],
@@ -41,7 +41,7 @@ const rules = {
 
 module.exports = {
   rules,
-  plugins: [ 'rxjs', 'rxjs-angular' ],
+  plugins: ['rxjs', 'rxjs-angular'],
   extends: [
     'plugin:@angular-eslint/recommended',
     'plugin:rxjs/recommended',

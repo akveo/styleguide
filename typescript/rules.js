@@ -2,14 +2,14 @@ const rules = {
   /* JS */
   'prettier/prettier': 'off',
   'curly': 'error',
-  'operator-linebreak': [ 'error', 'after' ],
-  'semi-style': [ 'error', 'last' ],
+  'operator-linebreak': ['error', 'after'],
+  'semi-style': ['error', 'last'],
   'semi-spacing': 'error',
-  'comma-style': [ 'error', 'last' ],
-  'max-len': [ 'error', { code: 120 } ],
+  'comma-style': ['error', 'last'],
+  'max-len': ['error', { code: 120 }],
   'space-infix-ops': 'error',
   'space-unary-ops': 'error',
-  'space-in-parens': [ 'error', 'never' ],
+  'space-in-parens': ['error', 'never'],
   'no-new-wrappers': 'error',
   'no-new-object': 'error',
   'no-new-func': 'error',
@@ -20,8 +20,8 @@ const rules = {
   'prefer-const': 'error',
   'no-throw-literal': 'error',
   'default-case': 'error',
-  'eqeqeq': [ 'error', 'smart' ],
-  'func-style': [ 'error', 'declaration', { 'allowArrowFunctions': true } ],
+  'eqeqeq': ['error', 'smart'],
+  'func-style': ['error', 'declaration', { 'allowArrowFunctions': true }],
   'prefer-arrow-callback': 'error',
   'array-callback-return': 'error',
   // TODO: Rule has much more options. It's worth to adjust them.
@@ -48,10 +48,10 @@ const rules = {
   'func-call-spacing': 'error',
 
   'key-spacing': 'error',
- 
+
   'array-bracket-spacing': [
     'error',
-    'always',
+    'never',
   ],
   'object-curly-spacing': [
     'error',
@@ -60,7 +60,7 @@ const rules = {
   /* TS */
   '@typescript-eslint/prefer-readonly': 'off',
   '@typescript-eslint/prefer-for-of': 'error',
-  '@typescript-eslint/ban-ts-comment': [ 'error', { 'ts-ignore': 'allow-with-description' } ],
+  '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
 
   // TODO: add to styleguide exception regarding args starting with '_'
   '@typescript-eslint/no-unused-vars': [
@@ -73,15 +73,15 @@ const rules = {
   ],
 
   '@typescript-eslint/no-non-null-assertion': 'error',
-  '@typescript-eslint/no-explicit-any': [ 'error' ],
+  '@typescript-eslint/no-explicit-any': ['error'],
   '@typescript-eslint/await-thenable': 'error',
-  '@typescript-eslint/explicit-function-return-type': [ 'error', { allowExpressions: true } ],
+  '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
 
-  '@typescript-eslint/brace-style': [ 'error' ],
+  '@typescript-eslint/brace-style': ['error'],
 
-  '@typescript-eslint/comma-spacing': [ 'error' ],
+  '@typescript-eslint/comma-spacing': ['error'],
 
-  '@typescript-eslint/keyword-spacing': [ 'error', { before: true } ],
+  '@typescript-eslint/keyword-spacing': ['error', { before: true }],
 
   '@typescript-eslint/member-delimiter-style': 'error',
 
@@ -110,21 +110,21 @@ const rules = {
   '@typescript-eslint/prefer-string-starts-ends-with': 'error',
 
 
-  '@typescript-eslint/semi': [ 'error', 'always' ],
+  '@typescript-eslint/semi': ['error', 'always'],
 
-  '@typescript-eslint/restrict-plus-operands': [ 'error', { checkCompoundAssignments: true } ],
+  '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
   '@typescript-eslint/type-annotation-spacing': 'error',
 
 
-  '@typescript-eslint/indent': [ 'error', 2 ],
+  '@typescript-eslint/indent': ['error', 2],
 
   '@typescript-eslint/no-shadow': 'error',
 
 
-  '@typescript-eslint/comma-dangle': [ 'error', 'always-multiline' ],
+  '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
 
 
-  '@typescript-eslint/quotes': [ 'error', 'single' ],
+  '@typescript-eslint/quotes': ['error', 'single'],
 
 
   '@typescript-eslint/padding-line-between-statements': [
@@ -154,7 +154,7 @@ const rules = {
         'typeParameter',
         'typeAlias',
       ],
-      format: [ 'PascalCase' ],
+      format: ['PascalCase'],
     },
     {
       selector: [
@@ -164,17 +164,17 @@ const rules = {
         'typeMethod',
         'parameter',
       ],
-      format: [ 'camelCase' ],
+      format: ['camelCase'],
     },
     {
-      selector: [ 'typeAlias' ],
+      selector: ['typeAlias'],
       format: [
         'PascalCase',
         'camelCase',
       ],
     },
     {
-      selector: [ 'enumMember' ],
+      selector: ['enumMember'],
       format: [
         'UPPER_CASE',
         'PascalCase',
@@ -198,10 +198,10 @@ const rules = {
 };
 
 module.exports = {
-  plugins: [ '@typescript-eslint' ],
+  plugins: ['@typescript-eslint'],
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'eslint:recommended', 
+    'eslint:recommended',
   ],
   rules,
 };

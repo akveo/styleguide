@@ -2,18 +2,17 @@ module.exports = {
   extends: [],
   overrides: [
     {
-      files: [ '*.ts' ],
+      files: ['*.ts'],
       extends: [
-        './typescript/rules', 
-        './angular/rules.js', 
-        'plugin:@angular-eslint/recommended', 'plugin:rxjs/recommended',
+        './typescript/rules',
+        './angular/rules.js',
       ],
     },
     {
-      files: [ '*.html' ],
-      extends: [ './angular/rules-template.js', 'plugin:@angular-eslint/template/recommended' ],
+      files: ['*.html'],
+      extends: ['./angular/rules-template.js'],
     },
-   
+
   ],
   rules: {},
 };
