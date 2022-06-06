@@ -7,15 +7,21 @@
 - [TypeScript](./typescript/README.md)
 - [RxJs](./rxjs/README.md)
 
-## Intall
-* run a basic lint install for your platform
-* to use angular configs run `npm i eslint-plugin-rxjs eslint-plugin-rxjs-angular`
-
+## Intallation
+- run a basic lint installation for your platform
+- if you are using typescript make sure the following plugins are installed:
+  'plugin:@typescript-eslint/recommended',
+  'eslint:recommended',
+- to use angular configs run `npm i eslint-plugin-rxjs eslint-plugin-rxjs-angular` and make sure the following plugins are also installed and extended from:   
+  'plugin:@angular-eslint/recommended',
+  'plugin:@angular-eslint/template/process-inline-templates',
+- to use react configs make sure the following plugins are installed and are extended from :
+  'plugin:react/recommended',
+  'plugin:react/jsx-runtime',
+- if you are using react native make sure that in adition to react plugins the following plugin is installed: 
+  'eslint-plugin-react-native'
 # How to apply
 add the necessary confing to the "extends" array of eslintrc.json :
-
 "extends": [
-  "plugin:@angular-eslint/recommended",
-  "plugin:@angular-eslint/template/process-inline-templates",
   "akveo/angular"
 ]
