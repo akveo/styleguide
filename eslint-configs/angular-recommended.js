@@ -4,13 +4,13 @@ module.exports = {
     {
       files: ['*.ts'],
       extends: [
-        './typescript/rules',
-        './angular/rules.js',
+        '../typescript/rules.js',
+        '../angular/rules.js',
       ],
     },
     {
       files: ['*.html'],
-      extends: ['./angular/rules-template.js'],
+      extends: ['../angular/rules-template.js'],
     },
 
   ],

@@ -10,9 +10,9 @@
     "lint:fix": "eslint . --fix"
   },
   "exports": {
-    "./angular": "./angular.js",
-    "./react": "./react.js",
-    "./react-native": "./react-native.js"
+    "./angular:recommended": "./eslint-configs/angular-recommended.js",
+    "./react:recommended": "./eslint-configs/react-recommended.js",
+    "./react-native:recommended": "./eslint-configs/react-native-recommended.js"
   },
   "keywords": [
     "akveo",

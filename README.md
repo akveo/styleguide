@@ -23,5 +23,5 @@
 # How to apply
 add the necessary confing to the "extends" array of eslintrc.json :
 "extends": [
-  "akveo/angular"
+  "akveo/angular:recommended"
 ]
