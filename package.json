@@ -12,7 +12,8 @@
   "exports": {
     "./angular:recommended": "./eslint-configs/angular-recommended.js",
     "./react:recommended": "./eslint-configs/react-recommended.js",
-    "./react-native:recommended": "./eslint-configs/react-native-recommended.js"
+    "./react-native:recommended": "./eslint-configs/react-native-recommended.js",
+    "./rxjs:recommended": "./eslint-configs/rxjs-recommended.js"
   },
   "keywords": [
     "akveo",

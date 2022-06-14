@@ -18,32 +18,11 @@ const rules = {
     'error',
     { 'type': 'element', 'prefix': 'app', 'style': 'kebab-case' },
   ],
-
-  // RxJS
-  'rxjs/no-compat': 'error',
-  'rxjs/no-ignored-observable': 'error',
-  'rxjs/no-exposed-subjects': ['error', { allowProtected: true }],
-  'rxjs/no-topromise': 'error',
-
-  'rxjs/no-cyclic-action': 'error',
-  'rxjs/no-unsafe-catch': 'error',
-  'rxjs/no-unsafe-first': 'error',
-  'rxjs/no-unsafe-switchmap': 'error',
-
-  'rxjs-angular/prefer-takeuntil': [
-    'error',
-    {
-      checkDecorators: ['Component', 'Directive', 'Pipe', 'Injectable'],
-      checkDestroy: false,
-    },
-  ],
 };
 
 module.exports = {
   rules,
-  plugins: ['rxjs', 'rxjs-angular'],
   extends: [
     'plugin:@angular-eslint/recommended',
-    'plugin:rxjs/recommended',
   ],
 };

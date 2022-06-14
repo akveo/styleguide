@@ -6,6 +6,8 @@ module.exports = {
       extends: [
         '../typescript/rules.js',
         '../angular/rules.js',
+        './rxjs-recommended.js',
+        '../rxjs/rules-angular.js',
       ],
     },
     {
