@@ -41,10 +41,6 @@
     "url": "https://github.com/akveo/styleguide/issues"
   },
   "homepage": "https://github.com/akveo/styleguide#readme",
-  "dependencies": {
-    "eslint-plugin-rxjs": "^5.0.2",
-    "eslint-plugin-rxjs-angular": "^2.0.0"
-  },
   "devDependencies": {
     "eslint": "^8.16.0"
   }
