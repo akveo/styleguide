@@ -2,11 +2,13 @@
 
 ## Table of content
 
-1. [General](#general)
-2. [Syntax](#syntax)
-3. [Formatting](#formatting)
-4. [Component Structure](#component-structure)
-5. [Eslint](#eslint)
+- [Akveo React styleguide](#akveo-react-styleguide)
+  - [Table of content](#table-of-content)
+  - [General](#general)
+  - [Syntax](#syntax)
+  - [Formatting](#formatting)
+  - [Component Structure](#component-structure)
+  - [ESLint](#eslint)
 
 
 ## General
@@ -17,9 +19,9 @@
 
 1. #### Component files **[⬆](#table-of-content)**
 
-   * Only one React component per file. 
+   * Only one React component per file.
      * As an exception multiple small pure or stateless components are allowed in one file.
-     
+
 ## Syntax
 
 1. #### Naming Style **[⬆](#table-of-content)**
@@ -31,7 +33,7 @@
    * Component name should be the same as the file name. This means that the use of `index` files is forbidden for components. It's easier to find components by filename rather than by folder name.
    * Component filenames should be in UpperCamelCase. It's allowed to use dots (`.`) to explicitly mention type of component: `Dashboard.component.tsx`, `UserProfile.container.tsx`.
    * Props and state interface definitions shouldn't be prefixed with `I`. Use UpperCamelCase instead.
-   * Exported props types should have a suffix `Props`: `ProgressBarProps`. Not exported props and state interfaces recommended naming `Props` and `State` respectively.   
+   * Exported props types should have a suffix `Props`: `ProgressBarProps`. Not exported props and state interfaces recommended naming `Props` and `State` respectively.
 
 ## Formatting
 
@@ -41,7 +43,7 @@
    * There is no space after opening curly brace (`{`) and before closing curly brace (`}`) when wrapping JS expression in JSX:
    ```tsx
    <Component user={someUser} />
-   
+
    {isLoading && <Loader />}
    ```
    * Before self-closing `/>` tag should be a single space.
@@ -63,13 +65,13 @@
 
        <UserProfile
          name='Boris'
-         lastName='Blade' 
+         lastName='Blade'
        />
        ```
    * Both single line & multiline JSX are wrapped in parentheses. After opening parenthesis `(` and before closing `)` should be a line break.
      ```tsx
      return (
-       <CustomComponent 
+       <CustomComponent
          prop1={value1}
          prop2={value2}
        />
@@ -85,14 +87,14 @@
 
    * Use single quotes `'` for jsx attributes.
    * Do not use braces `{}` for string literals unless it's JS expression.
-   * Use explicit value for boolean props even if default value is `true`. 
+   * Use explicit value for boolean props even if default value is `true`.
      ```tsx
      <Component enabled={true} />
      ```
    * Do not inline object or array creation inside jsx. Prepare the data before `return` statement.
    * Inline styles are forbidden. Use `Stylesheet.create` or its analogue.
    * Destruct props and state before usage.
-   
+
 
 ## Component Structure
 
@@ -134,9 +136,9 @@
     * What format do you want your config file to be in? -> JSON
 
     This setup automatically will install the packages mentioned in the **Recommended packages** section.
-    However, this setup will still cause error even in the basic create-react-app project. 
+    However, this setup will still cause error even in the basic create-react-app project.
     The additional steps to make sure that ESLint is running smoothly with React application are listed below.
-    
+
    **Rules for React Hook**
    * install [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) to enforce hooks rules that were set by React team:
      ```
@@ -182,7 +184,7 @@
        ]
      }
      ```
- 
+
    **Guide for Typescript project**
     * Add following rules to `.eslintrc.json`:
       ```json
@@ -213,7 +215,7 @@
       ```
       npm install eslint-import-resolver-typescript --save-dev
       ```
-      also add a `settings` property to `.eslintrc.json`: 
+      also add a `settings` property to `.eslintrc.json`:
       ```json
       {
         // ...
@@ -239,7 +241,7 @@
         ],
       }
       ```
-    **No React import with New JSX Transform** 
+    **No React import with New JSX Transform**
     * if you're using React 17 and prefer not to include the React import in JSX files    ,
       disable following rules in `.eslintrc.json` file:
        ```json
@@ -252,7 +254,3 @@
          }
        }
        ```
-
-
-
-

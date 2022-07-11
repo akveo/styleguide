@@ -1,12 +1,12 @@
 const rules = {
   'react/jsx-uses-react': 'error',
   'react/jsx-uses-vars': 'error',
-  'react/no-multi-comp': [ 'error', { ignoreStateless: true } ],
-  'react/jsx-filename-extension': [ 'error', { 'extensions': [ '.tsx', '.jsx' ] } ],
-  'react/jsx-curly-spacing': [ 'error', { 'when': 'never' } ],
+  'react/no-multi-comp': ['error', { ignoreStateless: true }],
+  'react/jsx-filename-extension': ['error', { 'extensions': ['.tsx', '.jsx'] }],
+  'react/jsx-curly-spacing': ['error', { 'when': 'never' }],
   'react/jsx-closing-bracket-location': 'error',
   'react/jsx-closing-tag-location': 'error',
-  'react/jsx-boolean-value': [ 'error', 'always' ],
+  'react/jsx-boolean-value': ['error', 'always'],
   'react/jsx-curly-brace-presence':
     [
       'error',
@@ -18,11 +18,11 @@ const rules = {
   'react/require-render-return': 'error',
   'react/jsx-curly-newline': 'error',
   'react/jsx-first-prop-new-line': 'error',
-  'react/jsx-fragments': [ 'error', 'syntax' ],
-  'react/jsx-indent-props': [ 'error', 2 ],
+  'react/jsx-fragments': ['error', 'syntax'],
+  'react/jsx-indent-props': ['error', 2],
   'react/jsx-key': 'error',
-  'react/jsx-max-props-per-line': [ 'error', { 'maximum': 1 } ],
-  'react/jsx-no-bind': [ 'error', { 'allowArrowFunctions': true } ],
+  'react/jsx-max-props-per-line': ['error', { 'maximum': 1 }],
+  'react/jsx-no-bind': ['error', { 'allowArrowFunctions': true }],
   'react/jsx-no-constructed-context-values': 'error',
   'react/jsx-no-duplicate-props': 'error',
   'react/jsx-no-useless-fragment': 'error',
@@ -69,10 +69,11 @@ const rules = {
 
 module.exports = {
   rules,
-  plugins: [ 'react' ],
+  plugins: ['react'],
   extends: [
     'plugin:react/recommended',
-    'plugin:react/jsx-runtime', // For React 17.0 version and higher
+    // INFO: For React 17.0 version and higher
+    'plugin:react/jsx-runtime',
   ],
   parserOptions: {
     'ecmaFeatures': {

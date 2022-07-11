@@ -1,0 +1,47 @@
+{
+  "name": "eslint-config-akveo",
+  "version": "1.0.0",
+  "description": "ESLint shareable config for the Akveo style",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "exports": {
+    "./angular:recommended": "./eslint-configs/angular-recommended.js",
+    "./react:recommended": "./eslint-configs/react-recommended.js",
+    "./react-native:recommended": "./eslint-configs/react-native-recommended.js",
+    "./rxjs:recommended": "./eslint-configs/rxjs-recommended.js"
+  },
+  "keywords": [
+    "akveo",
+    "eslint",
+    "linter",
+    "code",
+    "quality",
+    "style",
+    "typescript",
+    "angular",
+    "rxjs",
+    "react",
+    "react-native"
+  ],
+  "peerDependencies": {
+    "eslint": "^8.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akveo/styleguide.git"
+  },
+  "author": "Akveo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akveo/styleguide/issues"
+  },
+  "homepage": "https://github.com/akveo/styleguide#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
+}

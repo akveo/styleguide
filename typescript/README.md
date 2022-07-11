@@ -2,12 +2,14 @@
 
 ## Table of content
 
-1. [Syntax](#syntax)
-1. [Formatting](#formatting)
-1. [Language Rules](#language-rules)
-1. [Source code organization](#source-code-organization)
-1. [Types](#types)
-1. [Other](#other)
+- [Akveo Typescript styleguide](#akveo-typescript-styleguide)
+  - [Table of content](#table-of-content)
+  - [Syntax](#syntax)
+  - [Formatting](#formatting)
+  - [Language Rules](#language-rules)
+  - [Source code organization](#source-code-organization)
+  - [Types](#types)
+  - [Other](#other)
 
 ## Syntax
 

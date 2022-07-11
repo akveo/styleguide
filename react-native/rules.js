@@ -12,7 +12,7 @@ module.exports = {
     'react-native',
   ],
   extends: [
-    './react.js',
+    '../react/rules.js',
   ],
   parserOptions: {
     'ecmaFeatures': {
