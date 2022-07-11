@@ -82,10 +82,17 @@ npm i -D eslint-config-akveo eslint-plugin-react-native
 
 - add akveo confing to the `extends` array in eslint config for your project.
 
-_eslintrc.json example:_
+_.eslintrc.js example:_
 
-```json
-"extends": [
-  "akveo/react-native:recommended"
-]
+```js
+overrides: [
+  {
+    extends: [
+      'akveo/react-native:recommended',
+    ],
+    parserOptions: {
+      project: ['./tsconfig.json'], // Specify it only for TypeScript files
+    },
+  },
+],
 ```
