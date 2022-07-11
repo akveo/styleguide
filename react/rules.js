@@ -65,6 +65,17 @@ const rules = {
   'react/prefer-es6-class': 'error',
   'react/self-closing-comp': 'error',
   'react/style-prop-object': 'error',
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: 'variable',
+      format: [
+        'camelCase',
+        'PascalCase',
+        'UPPER_CASE'
+      ],
+    },
+  ],
 };
 
 module.exports = {

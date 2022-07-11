@@ -42,7 +42,7 @@ const rules = {
   'no-new': 'error',
   'no-self-compare': 'error',
   'no-useless-call': 'error',
-  
+
   'key-spacing': 'error',
 
   'array-bracket-spacing': [
@@ -189,8 +189,9 @@ const rules = {
     {
       selector: ['enumMember'],
       format: [
-        'UPPER_CASE',
+        'camelCase',
         'PascalCase',
+        'UPPER_CASE'
       ],
     },
     {
